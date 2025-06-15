@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encuesta - Fashion Store J6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #7FFFD4, #00CED1);
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #ffffffdd;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #1E90FF;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #187bcd;
+      transform: scale(1.03);
+    }
+
+    a.back-link {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #1E90FF;
+      font-weight: bold;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Encuesta de Atención y Experiencia</h1>
+    <form id="surveyForm">
+      <label>1. ¿Cómo calificarías nuestra atención en línea?</label>
+      <input type="radio" name="atencion" value="excelente" required> Excelente<br>
+      <input type="radio" name="atencion" value="buena"> Buena<br>
+      <input type="radio" name="atencion" value="regular"> Regular<br>
+      <input type="radio" name="atencion" value="mala"> Mala<br>
+
+      <label>2. ¿Recibiste ayuda rápida?</label>
+      <input type="radio" name="rapidez" value="si" required> Sí<br>
+      <input type="radio" name="rapidez" value="no"> No<br>
+
+      <label>3. ¿El personal fue amable y profesional?</label>
+      <input type="radio" name="amabilidad" value="si" required> Sí<br>
+      <input type="radio" name="amabilidad" value="no"> No<br>
+
+      <label>4. ¿Encontraste fácilmente lo que buscabas?</label>
+      <input type="radio" name="facilidad" value="si" required> Sí<br>
+      <input type="radio" name="facilidad" value="no"> No<br>
+
+      <label>5. ¿Qué tan satisfecho estás con la variedad de productos?</label>
+      <input type="radio" name="variedad" value="muy satisfecho" required> Muy satisfecho<br>
+      <input type="radio" name="variedad" value="satisfecho"> Satisfecho<br>
+      <input type="radio" name="variedad" value="neutral"> Neutral<br>
+      <input type="radio" name="variedad" value="insatisfecho"> Insatisfecho<br>
+
+      <label>6. ¿Cómo calificarías la calidad de nuestros productos?</label>
+      <input type="radio" name="calidad" value="excelente" required> Excelente<br>
+      <input type="radio" name="calidad" value="buena"> Buena<br>
+      <input type="radio" name="calidad" value="regular"> Regular<br>
+      <input type="radio" name="calidad" value="mala"> Mala<br>
+
+      <label>7. ¿Recomendarías Fashion Store J6 a otras personas?</label>
+      <input type="radio" name="recomendacion" value="si" required> Sí<br>
+      <input type="radio" name="recomendacion" value="no"> No<br>
+
+      <label>8. ¿Con qué frecuencia compras en nuestra tienda?</label>
+      <input type="radio" name="frecuencia" value="semanalmente" required> Semanalmente<br>
+      <input type="radio" name="frecuencia" value="mensualmente"> Mensualmente<br>
+      <input type="radio" name="frecuencia" value="ocasionalmente"> Ocasionalmente<br>
+      <input type="radio" name="frecuencia" value="primera vez"> Es mi primera vez<br>
+
+      <label>9. ¿Qué aspectos te gustaría que mejoráramos?</label>
+      <textarea name="mejoras" placeholder="Ej: tiempos de respuesta, promociones, catálogo..."></textarea>
+
+      <label>10. Comentarios adicionales:</label>
+      <textarea name="comentarios" placeholder="Comparte tu experiencia o sugerencias..."></textarea>
+
+      <button type="submit">Enviar Encuesta</button>
+    </form>
+
+    <a href="ejemplo.html" class="back-link">← Volver al inicio</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('surveyForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("¡Gracias por completar la encuesta! Valoramos tu opinión.");
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

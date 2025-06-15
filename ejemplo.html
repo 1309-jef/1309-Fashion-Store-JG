@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store J</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #7FFFD4, #00CED1);
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #333;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    .button {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 180px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .blue { background-color: #1E90FF; }
+    .orange { background-color: #FF8C00; }
+
+    .main-buttons, .bottom-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .slider {
+      width: 80%;
+      height: 350px;
+      margin: 10px auto;
+      border: 6px solid #228B22;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* <-- CAMBIO AQUÍ */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: white; /* opcional para fondo uniforme */
+
+
+    }
+    .slider img.active {
+      opacity: 1;
+    }
+    .social-icons {
+      position: fixed;
+      right: 15px;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 1000;
+    }
+    .social-icons img {
+      width: 36px;
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+<img src="LogoEmpresa.jpg" alt="Logo de la tienda" class="logo">
+
+    <h1>Fashion Store JG</h1>
+  </header>
+
+  <div class="main-buttons">
+    <a href="contacto.html" class="button blue">Contacto</a>
+    <a href="seccion.html" class="button orange">Galeria de Productos</a>  
+    <a href="descuentos.html" class="button blue">Seccion de Testimonios</a>
+    <a href="precios.html" class="button orange">Lo mas vendido</a>
+  </div>
+
+  <div class="slider">
+  <img src="C3.jpeg" class="active" alt="Slide 1">
+  <img src="PN12.jpeg" alt="Slide 3">
+  <img src="PN13.jpeg">
+  <img src="V13.jpeg">
+  <img src="V14.jpeg">
+  <img src="V15.jpeg">
+  <img src="C8.jpeg">
+  <img src="C9.jpeg">
+  <img src="PN14.jpeg">
+  <img src="PN15.jpeg">
+  <img src="P13.jpeg">
+  <img src="P14.jpeg">
+  <img src="P15.jpeg">
+  </div>
+
+  <div class="bottom-buttons">
+    <a href="quejas.html" class="button blue">Libro de Quejas</a>
+    <a href="encuesta.html" class="button orange">Encuesta para mejorar nuestra atención</a>
+    <a href="contactanos.html" class="button blue">Nuestra Empresa</a>
+  </div>
+
+
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3500);
+  </script>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redes Sociales</title>
+<!-- Enlace a FontAwesome para los íconos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+  .logo {
+  width: 180px;  /* Tamaño del logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);  /* Efecto de zoom */
+}
+
+/* Estilo para la página */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+/* Contenedor flotante de redes sociales */
+.social-icons {
+position: fixed;
+right: 20px;  /* Alineado al lado derecho */
+bottom: 50px; /* Ajuste desde el fondo */
+z-index: 1000;
+}
+.social-icons a {
+display: block;
+margin-bottom: 10px;
+padding: 15px;
+border-radius: 50%;
+text-align: center;
+font-size: 24px;
+color: white;  /* Texto blanco para los íconos */
+transition: all 0.3s ease;
+}
+/* Colores brillantes para cada red social */
+.whatsapp {
+background-color: #25D366; /* WhatsApp */
+}
+.facebook {
+background-color: #1877F2; /* Facebook */
+}
+.instagram {
+background-color: #E4405F; /* Instagram */
+}
+.tiktok {
+background-color: #000000; /* TikTok */
+}
+/* Efecto de hover (cuando el usuario pasa el cursor sobre los íconos) */
+.social-icons a:hover {
+transform: scale(1.5);  /* Aumenta el tamaño */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra de efecto */
+}
+</style>
+</head>
+<body>
+<!-- Contenedor de redes sociales -->
+<div class="social-icons">
+<a href="https://wa.me/1234567890" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<a href="https://www.facebook.com/tu_pagina" class="facebook" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.instagram.com/tu_perfil" class="instagram" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.tiktok.com/@tu_usuario" class="tiktok" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+</div>
+</body>
+</html>
+</body>
+</html>

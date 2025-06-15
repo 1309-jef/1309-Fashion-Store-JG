@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libro de Quejas - Fashion Store J6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #7FFFD4, #00CED1);
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #ffffffdd;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #1E90FF;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #187bcd;
+      transform: scale(1.03);
+    }
+
+    a.back-link {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #1E90FF;
+      font-weight: bold;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Libro de Quejas</h1>
+    <form id="complaintForm">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="fecha">Fecha del incidente</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="categoria">Categoría de la queja</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">-- Selecciona una opción --</option>
+        <option value="atencion">Atención al cliente</option>
+        <option value="producto">Producto defectuoso</option>
+        <option value="envio">Problemas con el envío</option>
+        <option value="facturacion">Facturación</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="detalle">Descripción de la queja</label>
+      <textarea id="detalle" name="detalle" rows="6" placeholder="Explica con detalle lo sucedido..." required></textarea>
+
+      <label for="solicitud">¿Qué solución esperas?</label>
+      <textarea id="solicitud" name="solicitud" rows="4" placeholder="Describe la solución deseada..." required></textarea>
+
+      <button type="submit">Enviar Queja</button>
+    </form>
+
+    <a href="ejemplo.html" class="back-link">← Volver al inicio</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('complaintForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("¡Gracias por tu mensaje! Tu queja ha sido recibida y será atendida lo antes posible.");
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
